@@ -11,7 +11,7 @@ class App < Sinatra::Base
     erb :index
   end
 
-  # Set item from params to sessions item key
+  # Set item key from to session[:item] from params[:item] from name='item'
   post '/checkout' do
     session[:item] = params[:item]
     @session = session
